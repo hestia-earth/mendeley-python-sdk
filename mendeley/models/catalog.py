@@ -15,6 +15,7 @@ class CatalogDocument(BaseDocument):
     .. attribute:: keywords
     .. attribute:: abstract
     .. attribute:: link
+    .. attribute:: pdf
     """
     @property
     def files(self):
@@ -26,7 +27,7 @@ class CatalogDocument(BaseDocument):
 
     @classmethod
     def fields(cls):
-        return super(CatalogDocument, cls).fields() + ['link']
+        return super(CatalogDocument, cls).fields() + ['link', 'pdf']
 
 
 class CatalogBibView(BaseBibView):
